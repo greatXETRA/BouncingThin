@@ -10,7 +10,7 @@ let j;
 let max;
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(800, 600);
   x = random(width);
   y = random(height);
   xspeed = 2;
@@ -32,8 +32,8 @@ fill(c);
   x = x + xspeed;
   y = y + yspeed;
 
-  if (x+textWidth(array[i]) >= windowWidth-20) {
-     x = windowWidth-textWidth(array[i+1])-21;
+  if (x+textWidth(array[i]) >= 800-20) {
+     x = 800-textWidth(array[i+1])-21;
     xspeed = -xspeed;
    
     i = i+1;
@@ -50,9 +50,9 @@ fill(c);
     if (j >= 7){j=0}
   }
 
-  if (y >= windowHeight-30) {
+  if (y >= 600-30) {
     yspeed = -yspeed;
-    y = windowHeight-30;
+    y = 600-30;
     i = i+1;
     j = j+1;
     if (i >= max){i=0}
