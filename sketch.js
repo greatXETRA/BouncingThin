@@ -22,3 +22,48 @@ function setup() {
   array = ['Wie geht es Ihnen?','Welche Farbe mögen Sie?','Warum?','Ist es warm?','Es ist Februar','Mögen Sie Katzenfutter?','Tragen Sie Schuhe?','Können wir uns duzen?'];
   rain = ['rgba(0, 68, 220, 1)','rgba(0, 175, 175, 1)','rgba(0, 255, 0, 1)','rgba(255, 255, 0, 1)','rgba(255, 146, 0, 1)','rgba(255, 0, 0, 1)','rgba(255, 0, 255, 1)',]
 }
+
+function draw() {
+  background(0,0,0);
+  c = color(rain[j]);
+fill(c);
+  text(array[i],30+x,30+y);
+ 
+  x = x + xspeed;
+  y = y + yspeed;
+
+  if (x+textWidth(array[i]) >= windowWidth-20) {
+     x = windowWidth-textWidth(array[i+1])-21;
+    xspeed = -xspeed;
+   
+    i = i+1;
+    j = j+1;
+    if (i >= max){i=0}
+    if (j >= 7){j=0}
+  }
+  if (x <= 0) {
+    xspeed = -xspeed;
+    x = 0;
+    i = i+1;
+    j = j+1;
+    if (i >= max){i=0}
+    if (j >= 7){j=0}
+  }
+
+  if (y >= windowHeight-30) {
+    yspeed = -yspeed;
+    y = windowHeight-30;
+    i = i+1;
+    j = j+1;
+    if (i >= max){i=0}
+    if (j >= 7){j=0}
+  } 
+  if (y <= 0) {
+    yspeed = -yspeed;
+    y =0;
+    i = i+1;
+    j = j+1;
+    if (i >= max){i=0}
+    if (j >= 7){j=0}
+  }
+}
