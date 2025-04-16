@@ -19,7 +19,7 @@ function setup() {
   i =1;
   j=1
   max=8;
-  array = ['Wie geht es Ihnen?','Welche Farbe mögen Sie?','Warum?','Ist es warm?','Es ist Februar','Mögen Sie Katzenfutter?','Tragen Sie Schuhe?','Können wir uns duzen?'];
+  array = ['Spassgetränk','Spassgetränk?','Spassgetränk','Spassgetränk','Spassgetränk','Spassgetränk','Spassgetränk','Spassgetränk'];
   rain = ['rgba(0, 68, 220, 1)','rgba(0, 175, 175, 1)','rgba(0, 255, 0, 1)','rgba(255, 255, 0, 1)','rgba(255, 146, 0, 1)','rgba(255, 0, 0, 1)','rgba(255, 0, 255, 1)',]
 }
 
